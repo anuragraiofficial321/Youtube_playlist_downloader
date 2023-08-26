@@ -38,7 +38,7 @@ def download():
             video = YouTube(url)
             print(f"Downloading {video.title}")
             title = video.title.strip()
-            print(title)
+            # print(title)
 
             # Sanitize the video title for use in URLs
             sanitized_title = re.sub(r"[^a-zA-Z0-9]", "_", title)
