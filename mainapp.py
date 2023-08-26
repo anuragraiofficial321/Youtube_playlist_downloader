@@ -28,12 +28,12 @@ def download():
         os.mkdir(download_path)
 
     video_links = []  # Store video download links
-    c = 0  #to download all video remove this 
+    c = 0  # to download all video remove this
     for url in playlist:
         try:
-            c = c + 1 #to download all video remove this
-            if c == 3: #to download all video remove this
-                break #to download all video remove this
+            c = c + 1  # to download all video remove this
+            if c == 3:  # to download all video remove this
+                break  # to download all video remove this
 
             video = YouTube(url)
             print(f"Downloading {video.title}")
@@ -74,4 +74,4 @@ def serve_file(filename):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
